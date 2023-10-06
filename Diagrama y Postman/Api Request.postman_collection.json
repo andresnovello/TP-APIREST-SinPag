@@ -1,40 +1,29 @@
 {
 	"info": {
-		"_postman_id": "c5833647-a850-49ae-8f7b-cb73e16a21e9",
+		"_postman_id": "7e7d4adb-3be4-49c8-8ecb-07ae3bb565ef",
 		"name": "Api Request",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30235544"
+		"_exporter_id": "30236936"
 	},
 	"item": [
 		{
 			"name": "Persona",
 			"item": [
 				{
-					"name": "Get all",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Get All Persona",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://tp-apirest-nopag.onrender.com/api/v1/personas",
+							"raw": "https://tpapirest-sinpag.onrender.com//api/v1/personas",
 							"protocol": "https",
 							"host": [
-								"tp-apirest-nopag",
+								"tpapirest-sinpag",
 								"onrender",
 								"com"
 							],
 							"path": [
+								"",
 								"api",
 								"v1",
 								"personas"
@@ -44,22 +33,10 @@
 					"response": []
 				},
 				{
-					"name": "Get one",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Get One Persona",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/personas/1",
 							"protocol": "http",
@@ -78,7 +55,7 @@
 					"response": []
 				},
 				{
-					"name": "Create",
+					"name": "Create Persona",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -90,16 +67,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Albornoz\",\r\n    \"dni\": 48726483,\r\n    \"domicilio\":{\r\n        \"calle\": \"Taboada\",\r\n        \"numero\": 1482,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"localidad\": \"Lujan de Cuyo\"\r\n        }\r\n\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Tiempos feroces\",\r\n            \"fecha\": 2008,\r\n            \"genero\": \"Terror\",\r\n            \"pagina\": 87,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Fabian\",\r\n                    \"apellido\": \"Sevilla\",\r\n                    \"biografia\": \"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n                }\r\n\r\n            ]\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"dni\": 18689564,\r\n    \"domicilio\": {\r\n        \"calle\": \"Callejón de los Sueños\",\r\n        \"numero\": 45,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Luján de Cuyo\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {   \r\n            \"titulo\": \"Cien años de soledad\",\r\n            \"fecha\": 1967,\r\n            \"genero\": \"Realismo mágico\",\r\n            \"paginas\": 432,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Gabriel\",\r\n                    \"apellido\": \"Garcia Márquez\",\r\n                    \"biografia\": \"Nobel de Literatura 1982\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
-							"raw": "https://tp-apirest-nopag.onrender.com/api/v1/personas",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
 							"host": [
-								"tp-apirest-nopag",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -110,41 +86,9 @@
 					"response": []
 				},
 				{
-					"name": "Update",
+					"name": "Update Persona",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Julian\",\r\n        \"apellido\": \"Castrogamer\",\r\n        \"dni\": 48726483,\r\n        \"domicilio\": {\r\n            \"id\": 1,\r\n            \"calle\": \"Taboada\",\r\n            \"numero\": 1482,\r\n            \"localidad\": {\r\n                \"id\": 1,\r\n                \"denominacion\": \"Lujan de Cuyo\"\r\n            }\r\n        },\r\n        \"libros\": [\r\n            {\r\n                \"id\": 1,\r\n                \"titulo\": \"Tiempos feroces\",\r\n                \"fecha\": 2008,\r\n                \"genero\": \"Terror\",\r\n                \"paginas\": 0,\r\n                \"autores\": [\r\n                    {\r\n                        \"id\": 2,\r\n                        \"nombre\": \"Fabian\",\r\n                        \"apellido\": \"Sevilla\",\r\n                        \"biografia\": \"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/personas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"personas",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete",
-					"request": {
-						"method": "DELETE",
 						"header": [],
 						"url": {
 							"raw": "http://localhost:8080/api/v1/personas/1",
@@ -158,6 +102,28 @@
 								"v1",
 								"personas",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"4"
 							]
 						}
 					},
@@ -166,27 +132,15 @@
 			]
 		},
 		{
-			"name": "Autor",
+			"name": "Domicilio",
 			"item": [
 				{
-					"name": "Get all",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Get All Domicilio",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/autores",
+							"raw": "http://localhost:8080/api/v1/domicilios",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -195,31 +149,19 @@
 							"path": [
 								"api",
 								"v1",
-								"autores"
+								"domicilios"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get one",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Get One Domicilio",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
+							"raw": "http://localhost:8080/api/v1/domicilios/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -228,7 +170,7 @@
 							"path": [
 								"api",
 								"v1",
-								"autores",
+								"domicilios",
 								"1"
 							]
 						}
@@ -236,7 +178,7 @@
 					"response": []
 				},
 				{
-					"name": "Create",
+					"name": "Create Domicilio",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -248,42 +190,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Fabian\",\r\n    \"apellido\":\"Sevilla\",\r\n    \"biografia\":\"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "https://tp-apirest-nopag.onrender.com/api/v1/autores",
-							"protocol": "https",
-							"host": [
-								"tp-apirest-nopag",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"autores"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Julian\",\r\n        \"apellido\": \"Romagnoli\",\r\n        \"biografia\": \"Marcelo Romagnoli, nacido en 1974, es un autor imaginario cuyas palabras han tejido historias cautivadoras en el mundo de la literatura.\"\r\n    }"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
+							"raw": "http://localhost:8080/api/v1/domicilios",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -292,7 +202,28 @@
 							"path": [
 								"api",
 								"v1",
-								"autores",
+								"domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Domicilio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/domicilios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"domicilios",
 								"1"
 							]
 						}
@@ -300,12 +231,12 @@
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "Delete Domicilio",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
+							"raw": "http://localhost:8080/api/v1/domicilios/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -314,7 +245,7 @@
 							"path": [
 								"api",
 								"v1",
-								"autores",
+								"domicilios",
 								"1"
 							]
 						}
@@ -327,21 +258,62 @@
 			"name": "Localidad",
 			"item": [
 				{
-					"name": "Get all",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Get All Localidad",
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Localidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Localidad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\r\n    \"denominacion\": \"Godoy Cruz\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/localidades",
@@ -360,22 +332,10 @@
 					"response": []
 				},
 				{
-					"name": "Get one",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Update Localidad",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/localidades/1",
 							"protocol": "http",
@@ -394,7 +354,77 @@
 					"response": []
 				},
 				{
-					"name": "Create",
+					"name": "Delete Localidad",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Libro",
+			"item": [
+				{
+					"name": "Get All Libro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Libro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Libro",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -406,29 +436,113 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"denominacion\": \"Lujan de Cuyo\"\r\n}"
+							"raw": "{\r\n        \"titulo\": \"Los días del venado\",\r\n        \"fecha\": 2012,\r\n        \"genero\": \"Fantasia\",\r\n        \"paginas\": 329,\r\n                \"autores\": {\r\n                \"nombre\": \"Liliana\",\r\n                \"apellido\": \"Bodoc\",\r\n                \"biografia\": \"Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n        }\r\n}"
 						},
 						"url": {
-							"raw": "https://tp-apirest-nopag.onrender.com/api/v1/localidades",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/libros",
+							"protocol": "http",
 							"host": [
-								"tp-apirest-nopag",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"localidades"
+								"libros"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update",
+					"name": "Update Libro",
 					"request": {
 						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Get All Autor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Autor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Autor",
+					"request": {
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -438,10 +552,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\r\n    \"nombre\": \"Liliana\",\r\n    \"apellido\": \"Bodoc\",\r\n    \"biografia\": \"Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n}\r\n\r\n"
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades/2",
+							"raw": "http://localhost:8080/api/v1/autores",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -450,20 +564,27 @@
 							"path": [
 								"api",
 								"v1",
-								"localidades",
-								"2"
+								"autores"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "Update Autor",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Autor",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades/2",
+							"raw": "http://localhost:8080/api/v1/autores/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -472,8 +593,8 @@
 							"path": [
 								"api",
 								"v1",
-								"localidades",
-								"2"
+								"autores",
+								"5"
 							]
 						}
 					},
